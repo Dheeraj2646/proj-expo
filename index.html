@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBM Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container-fluid">
+            <div class="logo-container" aria-label="IBM Logo">
+                <!-- Using SVG Path for IBM Logo (Simulated) -->
+                <!-- The real IBM logo is stripes. I'll use a striped text effect in CSS or a simplified SVG path representation.
+                     The CSS solution in style.css for .ibm-logo-text is used if no SVG provided.
+                     But an SVG is cleaner. Let's try the SVG path I found earlier but without the fill color to let CSS handle it or just black. -->
+                <svg width="56" height="22" viewBox="0 0 56 22" fill="#161616">
+                    <g>
+                        <path d="M0 0h13v2H0zM18 0h20v2H18zM43 0h13v2H43z"/>
+                        <path d="M0 4h13v2H0zM18 4h20v2H18zM43 4h13v2H43z"/>
+                        <path d="M0 8h13v2H0zM18 8h20v2H18zM43 8h13v2H43z"/>
+                        <path d="M0 12h13v2H0zM18 12h7v2h-7zM31 12h7v2h-7zM43 12h13v2H43z"/>
+                        <path d="M0 16h13v2H0zM18 16h7v2h-7zM31 16h7v2h-7zM43 16h13v2H43z"/>
+                        <path d="M0 20h13v2H0zM18 20h20v2H18zM43 20h13v2H43z"/>
+                        <path d="M18 12h3v2h-3zM35 12h3v2h-3z" fill="#fff"/> <!-- Cuts for B -->
+                        <path d="M18 16h3v2h-3zM35 16h3v2h-3z" fill="#fff"/> <!-- Cuts for B -->
+                        <path d="M43 12h1v2h-1zM55 12h1v2h-1z" fill="#fff"/> <!-- Cuts for M -->
+                        <path d="M43 16h1v2h-1zM55 16h1v2h-1z" fill="#fff"/>
+                        <path d="M49 12h1v6h-1z" fill="#fff"/> <!-- Middle cut for M -->
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Left Side: Login Form -->
+        <section class="login-section">
+            <h1>Log in to IBM</h1>
+            <p class="subtext">Don't have an account? <a href="#">Create an IBMid</a></p>
+
+            <form onsubmit="event.preventDefault();">
+                <div class="form-group">
+                    <div class="text-input-group">
+                        <label for="ibmid">IBMid</label>
+                        <input type="text" id="ibmid" name="ibmid" autocomplete="username">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <span>Continue</span>
+                    <span class="btn-icon">
+                        <!-- Arrow Right SVG -->
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.3 1.3L8.6 2 13.2 6.6H0V9.4H13.2L8.6 14 9.3 14.7 16 8 9.3 1.3Z"/>
+                        </svg>
+                    </span>
+                </button>
+
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                    <span class="info-icon" title="To protect your security, select this option only if you use a computer or device that you own or control.">i</span>
+                </div>
+
+                <div class="alternative-login">
+                    <span class="alt-label">Alternative login</span>
+                    <button type="button" class="btn btn-outline">
+                        <span class="btn-text">Continue with Google</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                             <path d="M19.6 10.23c0-.709-.064-1.39-.182-2.045H10v3.868h5.382c-.232 1.25-.936 2.309-1.996 3.018v2.509h3.232c1.891-1.741 2.982-4.305 2.982-7.35z" fill="#4285F4"/>
+                             <path d="M10 20c2.7 0 4.964-.895 6.618-2.423l-3.232-2.509c-.895.6-2.04.955-3.386.955-2.605 0-4.81-1.76-5.596-4.123H1.973v2.591C3.618 17.759 7 20 10 20z" fill="#34A853"/>
+                             <path d="M4.405 11.9c-.2-.6-.314-1.24-.314-1.9 0-.66.114-1.3.314-1.9V5.509H1.974A9.994 9.994 0 0 0 0 10c0 1.614.386 3.14 1.073 4.491L4.404 11.9z" fill="#FBBC05"/>
+                             <path d="M10 3.818c1.468 0 2.786.505 3.823 1.496l2.868-2.868C14.959.818 12.695 0 10 0 7 0 3.618 2.241 1.973 5.509l2.432 2.591C5.19 5.577 7.395 3.818 10 3.818z" fill="#EA4335"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="forgot-link">
+                    Forgot IBMid? <a href="#">Contact the IBMid help desk</a>
+                </div>
+            </form>
+        </section>
+
+        <!-- Right Side: Graphic Background -->
+        <section class="graphic-section">
+            <div class="dots-background"></div>
+
+            <div class="art-container">
+                <!-- Abstract Art Elements -->
+                <div class="art-circle-large"></div>
+                <div class="art-curve-line"></div>
+                <div class="art-diamond"></div>
+                <div class="art-circle-small"></div>
+                <div class="art-dot-1"></div>
+                <div class="art-dot-2"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Contact</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms of use</a>
+            <a href="#">Accessibility</a>
+        </div>
+        <div class="footer-right">
+            Powered by IBM Security Verify
+        </div>
+    </footer>
+
+</body>
+</html>
